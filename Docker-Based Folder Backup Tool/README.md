@@ -38,12 +38,12 @@ The project performs the following tasks:
 - script.sh         # Backup automation script
 - README.md         # Project documentation
 Dockerfile Explanation
-dockerfile
-FROM alpine:latest
 
+FROM alpine:latest
 RUN mkdir /source /backup
 WORKDIR /source
 CMD cp -r /source/* /backup/
+
 What this does:
 Base image: Alpine Linux for minimal size and fast execution
 
