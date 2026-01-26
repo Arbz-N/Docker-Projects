@@ -6,16 +6,18 @@ services:
     ports:
       - "8001:8000"
     environment:
-      - MONGO_URI=${MONGO_URI}
+      - MONGO_URI=mongodb+srv://arbaznaeem555_db_user:VvB6YC4Pf6mJHD7N@project-01.qmjmllf.mongodb.net/?appName=project-01
   order-service:
     build: order-service
     ports:
       - "8002:8000"
     environment:
-      - MONGO_URI=${MONGO_URI}
+      - MONGO_URI=mongodb+srv://arbaznaeem555_db_user:VvB6YC4Pf6mJHD7N@project-01.qmjmllf.mongodb.net/?appName=project-01
+
   payment-service:
     build: payment-service
     ports:
       - "8003:8000"
     environment:
-      - MONGO_URI=${MONGO_URI}
+      - MONGO_URI=mongodb+srv://arbaznaeem555_db_user:VvB6YC4Pf6mJHD7N@project-01.qmjmllf.mongodb.net/?appName=project-01
+
