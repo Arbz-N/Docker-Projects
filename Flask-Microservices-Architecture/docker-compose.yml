@@ -2,13 +2,13 @@ version: "3.8"
 
 services:
   auth-service:
-    build: ../../github-projects/Docker Projects/Flask-Microservices-Architecture/auth-service
+    build: auth-service
     ports:
       - "8001:8000"
     environment:
       - MONGO_URI=${MONGO_URI}
   order-service:
-    build: ../../github-projects/Docker Projects/Flask-Microservices-Architecture/order-service
+    build: order-service
     ports:
       - "8002:8000"
     environment:
