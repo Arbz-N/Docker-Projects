@@ -14,15 +14,15 @@ logs = db["logs"]
 
 def log_events(level,message):
     logs.insert_one({
-        "Service":"SERVICE_NAME",
+        "Service":SERVICE_NAME,
         "level": level,
         "message": message,
         "timestamp": datetime.utcnow(),
-        "host": os.getenv("HOSTNAME", "auth-container")
+        "host": os.getenv("HOSTNAME", "payment-container")
     })
 
 @app.route("/pay",methods=["POST"])
-def login():
+def pay():
     log_events("INFO", "Payment initiated")
     log_events("INFO", "Payment successful")
     return jsonify({"status":"payment done"})

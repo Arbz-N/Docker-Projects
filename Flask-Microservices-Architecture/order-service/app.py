@@ -14,15 +14,15 @@ logs = db["logs"]
 
 def log_events(level,message):
     logs.insert_one({
-        "Service":"SERVICE_NAME",
+        "Service":SERVICE_NAME,
         "level": level,
         "message": message,
         "timestamp": datetime.utcnow(),
-        "host": os.getenv("HOSTNAME", "auth-container")
+        "host": os.getenv("HOSTNAME", "order-container")
     })
 
 @app.route("/order",methods=["POST"])
-def login():
+def order():
     log_events("INFO", "Order placed")
     return jsonify({"status":"order confirmed"})
 
