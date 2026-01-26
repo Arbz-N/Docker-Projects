@@ -7,10 +7,10 @@ LABEL maintainer="arbaznaeem555@gmail.com" \
 
 WORKDIR /payment
 
-COPY --chown=d_group:d_group requirements.txt .
+COPY --chown=1001:1001 requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY --chown=d_group:d_group app.py .
+COPY --chown=1001:1001 app.py .
 RUN chmod -R 755 /order && chmod -R 755 /payment/*
 
 USER d_user

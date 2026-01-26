@@ -21,7 +21,7 @@ def log_events(level,message):
         "host": os.getenv("HOSTNAME", "auth-container")
     })
 
-@app.route("/order",methods=["POST"])
+@app.route("/pay",methods=["POST"])
 def login():
     log_events("INFO", "Payment initiated")
     log_events("INFO", "Payment successful")

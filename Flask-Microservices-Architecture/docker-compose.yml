@@ -16,6 +16,6 @@ services:
   payment-service:
     build: payment-service
     ports:
-      - ""8003:8000""
+      - "8003:8000"
     environment:
       - MONGO_URI=${MONGO_URI}
