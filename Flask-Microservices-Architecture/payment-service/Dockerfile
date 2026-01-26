@@ -12,7 +12,7 @@ COPY --chown=1001:1001 requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY --chown=1001:1001 app.py .
-RUN chmod -R 755 /order && chmod -R 755 /payment/*
+RUN chmod -R 755 /payment && chmod -R 755 /payment/*
 
 USER d_user
 
