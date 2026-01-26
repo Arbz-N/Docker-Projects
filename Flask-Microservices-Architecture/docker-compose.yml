@@ -7,19 +7,19 @@ services:
     ports:
       - "8001:8000"
     environment:
-      - MONGO_URL=${MONGO_URI}
+      - MONGO_URL=${MONGO_URL}
   order-service:
     build: order-service
     image: order-service:latest
     ports:
       - "8002:8000"
     environment:
-      - MONGO_URL=${MONGO_URI}
+      - MONGO_URL=${MONGO_URL}
   payment-service:
     build: payment-service
     image: payment-service:latest
     ports:
       - "8003:8000"
     environment:
-      - MONGO_URL=${MONGO_URI}
+      - MONGO_URL=${MONGO_URL}
 
