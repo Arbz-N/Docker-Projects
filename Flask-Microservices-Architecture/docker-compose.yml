@@ -3,21 +3,23 @@ version: "3.8"
 services:
   auth-service:
     build: auth-service
+    image: auth-service:latest
     ports:
       - "8001:8000"
     environment:
-      - MONGO_URI=mongodb+srv://arbaznaeem555_db_user:VvB6YC4Pf6mJHD7N@project-01.qmjmllf.mongodb.net/?appName=project-01
+      - MONGO_URL=${MONGO_URI}
   order-service:
     build: order-service
+    image: order-service:latest
     ports:
       - "8002:8000"
     environment:
-      - MONGO_URI=mongodb+srv://arbaznaeem555_db_user:VvB6YC4Pf6mJHD7N@project-01.qmjmllf.mongodb.net/?appName=project-01
-
+      - MONGO_URL=${MONGO_URI}
   payment-service:
     build: payment-service
+    image: payment-service:latest
     ports:
       - "8003:8000"
     environment:
-      - MONGO_URI=mongodb+srv://arbaznaeem555_db_user:VvB6YC4Pf6mJHD7N@project-01.qmjmllf.mongodb.net/?appName=project-01
+      - MONGO_URL=${MONGO_URI}
 

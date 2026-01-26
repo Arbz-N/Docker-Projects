@@ -14,7 +14,7 @@ logs = db["logs"]
 
 def log_events(level,message):
     logs.insert_one({
-        "Service":SERVICE_NAME,
+        "Service": SERVICE_NAME,
         "level": level,
         "message": message,
         "timestamp": datetime.utcnow(),
