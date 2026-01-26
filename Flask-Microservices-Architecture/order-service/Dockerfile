@@ -1,6 +1,6 @@
 FROM python:3.11-slim
 
-RUN addgroup -g 1001 -S d_group && adduser -S d_user -u 1001
+RUN addgroup -g 1001 d_group && adduser -u 1001 -G d_group -S d_user
 
 LABEL maintainer="arbaznaeem555@gmail.com" \
     creation_date="2026-01-26"
