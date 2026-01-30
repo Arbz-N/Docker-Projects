@@ -1,4 +1,5 @@
-![Flask Microservices with Centralized Logging](./assets/Flask-Microservices-with-Centralized-Logging.png) 
+![Flask Microservices with Centralized Logging](./assets/Flask-Microservices-with-Centralized-Logging.png)
+-----------------------------------------------------------------------------------------------------------
     A lightweight microservices architecture demonstrating Docker containerization, service isolation, and centralized MongoDB logging.
     Three independent Flask services communicate asynchronously with unified event tracking.
 
