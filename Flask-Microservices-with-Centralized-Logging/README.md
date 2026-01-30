@@ -91,7 +91,7 @@ Quick Start
       "status": "order confirmed"
     }
     
-    📊 View Logs in MongoDB
+    View Logs in MongoDB
     Connect to MongoDB Atlas and check the microservice_logs database:
     
 5. MongoDB Schema
